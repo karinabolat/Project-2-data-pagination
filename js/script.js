@@ -81,8 +81,9 @@ function addPagination (list) {
             for (let i=0; i < buttons.length; i++ ) {
                buttons[i].className = '';
             }
+            
             button.className = 'active';
-            const page = button.textContent;
+            page = button.textContent;
             showPage(list, page); 
          }
       });
@@ -118,5 +119,5 @@ const filter = () => {
    addPagination(filteredStudents);
 }
 
-label.addEventListener('change', filter);
+label.addEventListener('submit', filter);
 input.addEventListener('keyup', filter);
